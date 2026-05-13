@@ -19,7 +19,9 @@ De esta manera, los usuarios podrán planear mejor sus traslados y ahorrar tiemp
 
 ## 👥 Integrantes del proyecto
 - **Jose Miguel Muñoz Torres**  
-  📧 23308060610631@cetis61.edu.mx  
+  📧 23308060610631@cetis61.edu.mx
+  <img width="200" height="266" alt="image" src="https://github.com/user-attachments/assets/3aaad68c-79a4-4503-887a-79ff507dedf4" />
+
 
 - **Marisol Medina Patlan**  
   📧 23308060610240@cetis61.edu.mx  
