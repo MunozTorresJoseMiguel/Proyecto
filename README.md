@@ -1,7 +1,7 @@
 # JuarezGO
-
 ## 📌 Descripción
 En la ciudad, muchas personas utilizan el transporte público diariamente para trasladarse a su trabajo, escuela, casa, etc. Sin embargo, enfrentan diversos problemas:
+
 
 - ⏳ Largos tiempos de espera en las paradas por desconocer la frecuencia de paso de las unidades.  
 - 📍 Dificultad para identificar el lugar correcto donde el transporte se detiene.  
@@ -16,7 +16,6 @@ En la ciudad, muchas personas utilizan el transporte público diariamente para t
 De esta manera, los usuarios podrán planear mejor sus traslados y ahorrar tiempo en su día a día.
 
 ---
-
 ## 👥 Integrantes del proyecto
 - **Jose Miguel Muñoz Torres**  
   📧 23308060610631@cetis61.edu.mx
