@@ -12,7 +12,7 @@ def DashboardView(page):
             ),
 
             ft.Text(
-                "LOGIN CORRECTO",
+                "Bienvenido a JuarezGo",
                 size=40
             )
 

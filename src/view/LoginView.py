@@ -52,7 +52,7 @@ def LoginView(page, auth_controller):
                                 color="white"
                             ),
                             ft.Text(
-                                "LOGIN CORRECTO",
+                                "Bienvenido a JuarezGo",
                                 size=35,
                                 weight="bold",
                                 color="white"
