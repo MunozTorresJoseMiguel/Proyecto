@@ -5,10 +5,8 @@ from src.controller.userController import AuthController
 
 
 def main(page: ft.Page):
-
+    page.window.maximized = True
     page.title = "JuarezGO"
-    page.window_width = 400
-    page.window_height = 750
     page.theme_mode = ft.ThemeMode.DARK
     page.padding = 0
 

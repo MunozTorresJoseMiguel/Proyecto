@@ -48,12 +48,75 @@ class UsuarioModel:
             # Si tu contraseña está en texto plano:
             if contrasena == user["contrasena"]:
                 return user
-
+    
             # Si luego usas bcrypt:
             # if bcrypt.checkpw(
             #     contrasena.encode('utf-8'),
             #     user["contrasena"].encode('utf-8')
             # ):
             #     return user
+class UsuarioModel:
+
+    def __init__(self):
+        self.db = Database()
+
+    def validar_login(self, correo, contrasena):
+
+        conn = Database.get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        query = """
+        SELECT * FROM usuarios
+        WHERE correo = %s
+        """
+
+        cursor.execute(query, (correo,))
+        user = cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
+        if user:
+
+            if contrasena == user["contrasena"]:
+                return user
 
         return None
+
+    def registrar_usuario(self, nombre, correo, contrasena):
+
+        conn = Database.get_connection()
+        cursor = conn.cursor()
+
+        verificar = """
+        SELECT * FROM usuarios
+        WHERE correo = %s
+        """
+
+        cursor.execute(verificar, (correo,))
+        existe = cursor.fetchone()
+
+        if existe:
+
+            cursor.close()
+            conn.close()
+
+            return False, "El correo ya existe"
+
+        query = """
+        INSERT INTO usuarios
+        (nombre, correo, contrasena)
+        VALUES (%s, %s, %s)
+        """
+
+        cursor.execute(
+            query,
+            (nombre, correo, contrasena)
+        )
+
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return True, "Usuario registrado correctamente"
