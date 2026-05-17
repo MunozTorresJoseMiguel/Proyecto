@@ -29,11 +29,10 @@ def DashboardView(page, user):
                     color="white"
                 ),
 
-                ft.Text(
-                    f"Bienvenido {user['nombre']}",
-                    color="white70",
-                    size=20
-                )
+            ft.Text(
+                "LOGIN CORRECTO",
+                size=40
+            )
 
             ],
             expand=True,

@@ -42,7 +42,38 @@ def LoginView(page, auth_controller):
             go_dashboard(page, user)  
 
             page.clean()
-            page.add(DashboardView(page, user))
+            page.add(
+                ft.Container(
+                    expand=True,
+                    gradient=ft.LinearGradient(
+                        begin=ft.Alignment(-1, -1),
+                        end=ft.Alignment(1, 1),
+                        colors=["#0f172a", "#1d4ed8"]
+                    ),
+                    content=ft.Column(
+                        [
+                            ft.Icon(
+                                ft.Icons.CHECK_CIRCLE,
+                                size=100,
+                                color="white"
+                            ),
+                            ft.Text(
+                                "LOGIN CORRECTO",
+                                size=35,
+                                weight="bold",
+                                color="white"
+                            ),
+                            ft.Text(
+                                f"Bienvenido {user['nombre']}",
+                                color="white70",
+                                size=18
+                            )
+                        ],
+                        alignment=ft.MainAxisAlignment.CENTER,
+                        horizontal_alignment=ft.CrossAxisAlignment.CENTER
+                    )
+                )
+            )
             page.update()
 
         else:
