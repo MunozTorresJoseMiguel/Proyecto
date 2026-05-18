@@ -29,3 +29,12 @@ De esta manera, los usuarios podrán planear mejor sus traslados y ahorrar tiemp
   <img width="200" height="253" alt="image" src="https://github.com/user-attachments/assets/65345305-2c9d-4341-8349-74980466a633" />
 
 
+
+
+
+
+
+
+
+
+https://github.com/pedroslopez/whatsapp-web.js?utm_source=chatgpt.com
