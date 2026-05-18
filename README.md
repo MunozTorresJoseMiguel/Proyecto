@@ -38,3 +38,4 @@ De esta manera, los usuarios podrán planear mejor sus traslados y ahorrar tiemp
 
 
 https://github.com/pedroslopez/whatsapp-web.js?utm_source=chatgpt.com
+https://pypi.org/project/alright/?utm_source=chatgpt.com
