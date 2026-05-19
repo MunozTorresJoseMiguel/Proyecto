@@ -17,13 +17,13 @@ def DashboardView(page, user):
             [
 
                 ft.Icon(
-                    ft.Icons.DASHBOARD,
+                    ft.Icons.DIRECTIONS_BUS,
                     size=100,
                     color="white"
                 ),
 
                 ft.Text(
-                    "BIENVENIDO A juarez GO",
+                    "BIENVENIDO A JUAREZGO",
                     size=40,
                     weight="bold",
                     color="white"
