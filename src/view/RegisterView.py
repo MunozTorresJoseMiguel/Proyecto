@@ -52,10 +52,6 @@ def RegisterView(page, auth_controller):
             user = {"nombre": nombre_input.value}
             go_dashboard(page, user)
             
-            page.clean()
-            page.add(DashboardView(page, user))
-            page.update()
-            
         else:
             page.snack_bar = ft.SnackBar(
             ft.Text(msg)

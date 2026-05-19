@@ -3,7 +3,13 @@ from src.models.UserModel import UsuarioModel
 class AuthController:
     def __init__(self):
         self.model = UsuarioModel()
+    def recuperar_password(self, correo, nueva_password):
 
+        return self.model.recuperar_password(
+        correo,
+        nueva_password
+    )
+    
     def login(self, email, contraseña):
         user = self.model.validar_login(email, contraseña)
 
@@ -33,4 +39,5 @@ def registrar(self, nombre, correo, contrasena):
         nombre,
         correo,
         contrasena
-    )    
+    ) 
+      

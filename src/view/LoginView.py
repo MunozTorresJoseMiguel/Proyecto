@@ -58,8 +58,17 @@ def LoginView(page, auth_controller):
         from src.view.RegisterView import RegisterView
         page.clean()
         page.add(
-        RegisterView(page, auth_controller)
-    )        
+        RegisterView(page, auth_controller))
+        
+        
+    def abrir_recuperar():
+
+        from src.view.RecoverView import RecoverView
+        page.clean()
+        page.add(
+        RecoverView(page, auth_controller))
+        page.update()
+                
     return ft.Container(
         
         
@@ -111,7 +120,13 @@ def LoginView(page, auth_controller):
                     "¿No tienes cuenta? Regístrate",
                    
                     on_click=abrir_registro
-                )
+                ),
+                
+                    ft.TextButton(
+                    "¿Olvidaste tu contraseña?",
+                     on_click=lambda e: abrir_recuperar(),
+                        style=ft.ButtonStyle(color="white")
+                    )
                 
                 
 

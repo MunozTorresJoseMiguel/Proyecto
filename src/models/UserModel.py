@@ -44,17 +44,17 @@ class UsuarioModel:
         conn.close()
 
         if user:
+            
+         if bcrypt.checkpw(
+            contrasena.encode("utf-8"),
+            user["contrasena"].encode("utf-8")
+        ):
 
-            # Si tu contraseña está en texto plano:
-            if contrasena == user["contrasena"]:
-                return user
-    
-            # Si luego usas bcrypt:
-            # if bcrypt.checkpw(
-            #     contrasena.encode('utf-8'),
-            #     user["contrasena"].encode('utf-8')
-            # ):
-            #     return user
+            return user
+
+        return None
+            
+            
 class UsuarioModel:
 
     def __init__(self):
@@ -78,11 +78,47 @@ class UsuarioModel:
 
         if user:
 
-            if contrasena == user["contrasena"]:
+            if bcrypt.checkpw(
+                contrasena.encode("utf-8"),
+                user["contrasena"].encode("utf-8")
+            ):
+    
                 return user
-
         return None
+    
+    def recuperar_password(self, correo, nueva_password):
 
+        conn = Database.get_connection()
+        cursor = conn.cursor()
+
+        hashed_password = bcrypt.hashpw(
+                nueva_password.encode("utf-8"),
+                bcrypt.gensalt()
+            ).decode("utf-8")
+
+        query = """
+            UPDATE usuarios
+        SET contrasena = %s
+            WHERE correo = %s
+            """
+
+            
+        cursor.execute(
+                query,
+                (hashed_password, correo)
+        )  
+
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return True, "Contraseña actualizada"
+
+    
+    
+    
+    
     def registrar_usuario(self, nombre, correo, contrasena):
 
         conn = Database.get_connection()
@@ -109,10 +145,15 @@ class UsuarioModel:
         VALUES (%s, %s, %s)
         """
 
+        hashed_password = bcrypt.hashpw(
+        contrasena.encode("utf-8"),
+        bcrypt.gensalt()
+    ).decode("utf-8")
+        
         cursor.execute(
-            query,
-            (nombre, correo, contrasena)
-        )
+        query,
+        (nombre, correo, hashed_password)
+    )
 
         conn.commit()
 
