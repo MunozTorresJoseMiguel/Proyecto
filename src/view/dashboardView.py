@@ -32,7 +32,12 @@ def DashboardView(page, user):
             ft.Text(
                 "LOGIN CORRECTO",
                 size=40
-            )
+            ),
+            ft.TextButton(
+                    "Cerrar Sesion",
+                     on_click=lambda e: LoginOut(),
+                        style=ft.ButtonStyle(color="white")
+                    )
 
             ],
             expand=True,
