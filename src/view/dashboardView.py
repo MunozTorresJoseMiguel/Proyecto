@@ -19,7 +19,7 @@ def DashboardView(page, user):
             [
 
                 ft.Container(height=30),
-
+                
                 ft.Text(
                     f"Bienvenido {user['nombre']}",
                     size=35,
@@ -36,13 +36,13 @@ def DashboardView(page, user):
                         RouteCard(
                             "Ruta Centro",
                             "Centro - Pronaf",
-                           "assets/img/ruta1.jpg"
+                            "img/ruta1.jpg"
                         ),
 
                         RouteCard(
                             "Ruta ITCJ",
                             "Las Torres - ITCJ",
-                            "assets/img/ruta1.jpg"
+                            "img/ruta1.jpg"
                         )
 
                     ],
