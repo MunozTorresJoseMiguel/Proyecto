@@ -1,4 +1,6 @@
 import flet as ft
+from src.components.RouteCard import RouteCard
+
 
 def DashboardView(page, user):
 
@@ -16,28 +18,44 @@ def DashboardView(page, user):
 
             [
 
-                ft.Icon(
-                    ft.Icons.DIRECTIONS_BUS,
-                    size=100,
-                    color="white"
-                ),
+                ft.Container(height=30),
 
                 ft.Text(
-                    "BIENVENIDO A JUAREZGO",
-                    size=40,
+                    f"Bienvenido {user['nombre']}",
+                    size=35,
                     weight="bold",
                     color="white"
                 ),
 
-            ft.Text(
-                "LOGIN CORRECTO",
-                size=40
-            )
+                ft.Container(height=20),
+
+                ft.Row(
+
+                    [
+
+                        RouteCard(
+                            "Ruta Centro",
+                            "Centro - Pronaf",
+                           "assets/img/ruta1.jpg"
+                        ),
+
+                        RouteCard(
+                            "Ruta ITCJ",
+                            "Las Torres - ITCJ",
+                            "assets/img/ruta1.jpg"
+                        )
+
+                    ],
+
+                    wrap=True,
+                    alignment=ft.MainAxisAlignment.CENTER
+
+                )
 
             ],
+
             expand=True,
 
-            alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER
 
         )

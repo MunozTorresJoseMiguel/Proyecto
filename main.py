@@ -15,6 +15,10 @@ def main(page: ft.Page):
     login_view = LoginView(page, auth_controller)
 
     page.add(login_view)
-
+ft.app(target=main,assets_dir="assets")    
 
 ft.run(main)
+#pip install flet
+#pip install mysql-connector-python
+#pip install bcrypt
+#pip install python-dotenv
