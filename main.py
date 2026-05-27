@@ -18,6 +18,7 @@ def main(page: ft.Page):
 ft.app(target=main,assets_dir="assets")    
 
 ft.run(main)
+#entorno virtual 
 #pip install flet
 #pip install mysql-connector-python
 #pip install bcrypt
