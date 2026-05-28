@@ -21,7 +21,7 @@ def DashboardView(page, user):
                 ft.Container(height=30),
                 
                 ft.Text(
-                    f"Bienvenido {user['nombre']}",
+                    f"BienvenidO{user['nombre']}",
                     size=35,
                     weight="bold",
                     color="white"
@@ -43,6 +43,16 @@ def DashboardView(page, user):
                             "Ruta ITCJ",
                             "Las Torres - ITCJ",
                             "img/ruta1.jpg"
+                        ),
+                        RouteCard(
+                            "Ruta 5-A",
+                            "blv zaragoza - walmart",
+                            "img/5.A.jpg"
+                        ),
+                        RouteCard(
+                            "Ruta UNITEC",
+                            "blv zaragoza - utcj",
+                            "img/unitec.jpg"
                         )
 
                     ],
