@@ -33,7 +33,7 @@ def RouteCard(titulo, descripcion, imagen):
                     ),
 
                     ft.ElevatedButton(
-                        "Ver ruta"
+                        "Ver rut"
                     )
 
                 ]
