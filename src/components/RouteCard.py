@@ -16,7 +16,7 @@ def RouteCard(titulo, descripcion, imagen):
                 [
 
                     ft.Image(
-                        src="img/ruta1.jpg",
+                        src=imagen,
                         width=400,
                         height=260,
                         border_radius=12

@@ -53,38 +53,6 @@ class UsuarioModel:
             return user
 
         return None
-            
-            
-class UsuarioModel:
-
-    def __init__(self):
-        self.db = Database()
-
-    def validar_login(self, correo, contrasena):
-
-        conn = Database.get_connection()
-        cursor = conn.cursor(dictionary=True)
-
-        query = """
-        SELECT * FROM usuarios
-        WHERE correo = %s
-        """
-
-        cursor.execute(query, (correo,))
-        user = cursor.fetchone()
-
-        cursor.close()
-        conn.close()
-
-        if user:
-
-            if bcrypt.checkpw(
-                contrasena.encode("utf-8"),
-                user["contrasena"].encode("utf-8")
-            ):
-    
-                return user
-        return None
     
     def recuperar_password(self, correo, nueva_password):
 

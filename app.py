@@ -15,11 +15,12 @@ def main(page: ft.Page):
     login_view = LoginView(page, auth_controller)
 
     page.add(login_view)
+    page.go("/rutas")
 ft.app(target=main,assets_dir="assets")    
 
-ft.run(main)
 #entorno virtual 
 #pip install flet
 #pip install mysql-connector-python
 #pip install bcrypt
 #pip install python-dotenv
+#uv pip install flet bcrypt mysql-connector-python python-dotenv
