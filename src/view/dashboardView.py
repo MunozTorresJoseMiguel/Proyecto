@@ -73,6 +73,27 @@ def DashboardView(page, user):
                             "Ruta UNITEC",
                             "blv zaragoza - utcj",
                             "img/unitec.jpg"
+                        ),
+                        RouteCard(
+                            "Ruta Centro",
+                            "Centro - Pronaf",
+                            "img/talamas.jpg"
+                        ),
+
+                        RouteCard(
+                            "Ruta ITCJ",
+                            "Las Torres - ITCJ",
+                            "img/centro.jpg"
+                        ),
+                        RouteCard(
+                            "Ruta 5-A",
+                            "blv zaragoza - walmart",
+                            "img/ruta.jpg"
+                        ),
+                        RouteCard(
+                            "Ruta UNITEC",
+                            "blv zaragoza - utcj",
+                            "img/unitec.jpg"
                         )
                     ],
 
